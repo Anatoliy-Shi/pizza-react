@@ -23,10 +23,10 @@ export const Header:FC = () => {
                         </div>
                     </div>
                 </Link>
-                {pathname === '/'  && <Search/> }
+                {pathname === '/pizza-react'  && <Search/> }
                 {totalCount > 0 && <div className="header__cart">
-                    {pathname !== '/basket' &&
-                        <Link to='/basket' className="button button--cart">
+                    {pathname !== 'pizza-react/basket' &&
+                        <Link to='pizza-react/basket' className="button button--cart">
                             <span>{totalPrice} ₽</span>
                             <div className="button__delimiter"></div>
                             <svg
