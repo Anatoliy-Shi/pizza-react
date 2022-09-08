@@ -2,7 +2,7 @@ import pizzaLogo from '../../../src/assets/img/pizza-logo.svg'
 import {Link, useLocation} from "react-router-dom";
 import {Search} from "./Search/Search";
 import {useSelector} from "react-redux";
-import {FC} from "react";
+import {FC, useEffect} from "react";
 import {SelectBasketItem} from "../../redux/slices/basketSlice";
 
 export const Header:FC = () => {
@@ -10,7 +10,9 @@ export const Header:FC = () => {
     const {pathname} = useLocation()
     const {totalPrice, items} = useSelector(SelectBasketItem)
     const totalCount = items.reduce((sum, item) => sum + item.count, 0)
-    console.log(pathname)
+     useEffect(() => {
+         console.log(pathname)
+     },[])
 
     return (
         <div className="header">
@@ -24,7 +26,7 @@ export const Header:FC = () => {
                         </div>
                     </div>
                 </Link>
-                {pathname === 'anatoliy-shi.github.io/pizza-react'  && <Search/> }
+                {pathname === 'pizza-react'  && <Search/> }
                 {totalCount > 0 && <div className="header__cart">
                     {pathname !== 'pizza-react/basket' &&
                         <Link to='pizza-react/basket' className="button button--cart">
