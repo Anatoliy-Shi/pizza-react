@@ -1,0 +1,55 @@
+@import '../variables';
+
+.header {
+  border-bottom: 1px solid $gray-line;
+  padding: 40px 0;
+  &__cart {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 320px) and (max-width: 580px) {
+      .header__cart {
+        .button {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          padding: 1px;
+          svg{
+            margin-right: 2px;
+          }
+          &__delimiter {
+            margin: 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+
+    img {
+      margin-right: 15px;
+    }
+
+    h1 {
+      color: #181818;
+      font-size: 24px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    p {
+      color: #7b7b7b;
+    }
+  }
+}

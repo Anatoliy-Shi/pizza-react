@@ -1,0 +1,19 @@
+.root{
+  position: relative;
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.input{
+  padding: 4px 5px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding-left: 18px;
+}
+.svg{
+  width: 18px;
+  position: absolute;
+  top: 11px;
+  right: 14px;
+}
