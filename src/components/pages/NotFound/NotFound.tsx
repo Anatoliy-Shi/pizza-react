@@ -11,7 +11,7 @@ export const NotFound:FC = () => {
                 <div>
                     <h1>Мы не нашли эту страницу</h1>
                     <p className={s.text}>Но знаем, где найти много всего вкусного</p>
-                        <Link className={s.back} to='/pizza-react'>На главную</Link>
+                        <Link className={s.back} to='/pizza-react/'>На главную</Link>
                 </div>
                 <img className={s.img} src={notfound} alt="not-found"/>
             </div>
