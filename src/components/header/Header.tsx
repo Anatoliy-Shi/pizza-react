@@ -24,7 +24,7 @@ export const Header:FC = () => {
                         </div>
                     </div>
                 </Link>
-                {pathname === 'https://anatoliy-shi.github.io/pizza-react/'  && <Search/> }
+                {pathname === 'anatoliy-shi.github.io/pizza-react'  && <Search/> }
                 {totalCount > 0 && <div className="header__cart">
                     {pathname !== 'pizza-react/basket' &&
                         <Link to='pizza-react/basket' className="button button--cart">
