@@ -10,9 +10,6 @@ export const Header:FC = () => {
     const {pathname} = useLocation()
     const {totalPrice, items} = useSelector(SelectBasketItem)
     const totalCount = items.reduce((sum, item) => sum + item.count, 0)
-     useEffect(() => {
-         console.log(pathname)
-     },[])
 
     return (
         <div className="header">
@@ -26,7 +23,7 @@ export const Header:FC = () => {
                         </div>
                     </div>
                 </Link>
-                {pathname === 'pizza-react'  && <Search/> }
+                {pathname === '/pizza-react/'  && <Search/> }
                 {totalCount > 0 && <div className="header__cart">
                     {pathname !== 'pizza-react/basket' &&
                         <Link to='pizza-react/basket' className="button button--cart">
