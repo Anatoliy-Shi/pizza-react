@@ -16,8 +16,8 @@ export const App: FC = () => {
                 <Suspense fallback={<Loader/>}>
                     <Routes>
                         <Route path='/pizza-react' element={<Content/>}/>
-                        <Route path='/pizza-react/basket' element={<Basket/>}/>
-                        <Route path='/pizza-react/*' element={<NotFound/>}/>
+                        <Route path='pizza-react/basket' element={<Basket/>}/>
+                        <Route path='pizza-react/*' element={<NotFound/>}/>
                     </Routes>
                 </Suspense>
             </div>

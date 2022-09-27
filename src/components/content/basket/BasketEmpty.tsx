@@ -11,7 +11,7 @@ export const BasketEmpty: FC = () => (
             Для того, чтобы заказать пиццу, перейди на главную страницу.
         </p>
         <img src={cartEmptyImg} alt="Empty cart" />
-        <Link to="/pizza-react/" className="button button--back">
+        <Link to="/pizza-react" className="button button--back">
             <span>Вернуться назад</span>
         </Link>
     </div>
