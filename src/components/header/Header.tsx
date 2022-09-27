@@ -2,7 +2,7 @@ import pizzaLogo from '../../../src/assets/img/pizza-logo.svg'
 import {Link, useLocation} from "react-router-dom";
 import {Search} from "./Search/Search";
 import {useSelector} from "react-redux";
-import {FC, useEffect} from "react";
+import {FC} from "react";
 import {SelectBasketItem} from "../../redux/slices/basketSlice";
 
 export const Header:FC = () => {
@@ -14,7 +14,7 @@ export const Header:FC = () => {
     return (
         <div className="header">
             <div className="container">
-                <Link to='pizza-react/'>
+                <Link to='/pizza-react/'>
                     <div className="header__logo">
                         <img width="38" src={pizzaLogo} alt="Pizza logo"/>
                         <div>
@@ -23,10 +23,10 @@ export const Header:FC = () => {
                         </div>
                     </div>
                 </Link>
-                {pathname === ('pizza-react/') && <Search/> }
+                {pathname === ('/pizza-react/') && <Search/> }
                 {totalCount > 0 && <div className="header__cart">
-                    {pathname === 'pizza-react/' &&
-                        <Link to='pizza-react/basket' className="button button--cart">
+                    {pathname === '/pizza-react/' &&
+                        <Link to='/pizza-react/basket' className="button button--cart">
                             <span>{totalPrice} ₽</span>
                             <div className="button__delimiter"></div>
                             <svg
